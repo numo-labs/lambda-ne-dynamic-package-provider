@@ -35,3 +35,16 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+# Should we put the sample results from NE API on GitHub...? (1k results is 80k lines ...)
+test/sample_results/NE_hotels_without_trips.json
+test/sample_results/NE_trips_with_hotels.json
+test/sample_results/NE_trips_without_hotels.json
+test/sample_results/1000_NE_hotels.json
+test/sample_results/all_hotels.json
+
+# Keep .env Environment Variables Secure
+.env
+
+# Editor files to ignore
+.idea

@@ -1,0 +1,262 @@
+{
+  "type": "package",
+  "id": "HKTANAN",
+  "packageOffer": {
+    "priorityCode": 295,
+    "hotel": {
+      "name": "Anan House",
+      "images": {
+        "small": [
+          {
+            "type": "image/jpeg",
+            "displaySequence": null,
+            "primary": null,
+            "uri": "http://images1.spies.dk/images/Hotel/HKTANAN1011_1_13.jpg?v=1"
+          },
+          {
+            "type": "image/jpeg",
+            "displaySequence": null,
+            "primary": null,
+            "uri": "http://images1.spies.dk/images/Hotel/HKTANAN1011_10_51.jpg?v=1"
+          },
+          {
+            "type": "image/jpeg",
+            "displaySequence": null,
+            "primary": null,
+            "uri": "http://images1.spies.dk/images/Hotel/HKTANAN1011_2_30.jpg?v=1"
+          },
+          {
+            "type": "image/jpeg",
+            "displaySequence": null,
+            "primary": null,
+            "uri": "http://images1.spies.dk/images/Hotel/HKTANAN1011_3_15.jpg?v=1"
+          },
+          {
+            "type": "image/jpeg",
+            "displaySequence": null,
+            "primary": null,
+            "uri": "http://images1.spies.dk/images/Hotel/HKTANAN1011_4_14.jpg?v=1"
+          },
+          {
+            "type": "image/jpeg",
+            "displaySequence": null,
+            "primary": null,
+            "uri": "http://images1.spies.dk/images/Hotel/HKTANAN1011_5_32.jpg?v=1"
+          },
+          {
+            "type": "image/jpeg",
+            "displaySequence": null,
+            "primary": null,
+            "uri": "http://images1.spies.dk/images/Hotel/HKTANAN1011_6_16.jpg?v=1"
+          },
+          {
+            "type": "image/jpeg",
+            "displaySequence": null,
+            "primary": null,
+            "uri": "http://images1.spies.dk/images/Hotel/HKTANAN1011_7_20.jpg?v=1"
+          },
+          {
+            "type": "image/jpeg",
+            "displaySequence": null,
+            "primary": null,
+            "uri": "http://images1.spies.dk/images/Hotel/HKTANAN1011_8_17.jpg?v=1"
+          },
+          {
+            "type": "image/jpeg",
+            "displaySequence": null,
+            "primary": null,
+            "uri": "http://images1.spies.dk/images/Hotel/HKTANAN1017_2_30.jpg?v=1"
+          },
+          {
+            "type": "image/jpeg",
+            "displaySequence": null,
+            "primary": null,
+            "uri": "http://images1.spies.dk/images/Hotel/HKTANAN1017_5_32.jpg?v=1"
+          },
+          {
+            "type": "image/jpeg",
+            "displaySequence": null,
+            "primary": null,
+            "uri": "http://images1.spies.dk/images/Hotel/HKTANAN1018_2_30.jpg?v=1"
+          },
+          {
+            "type": "image/jpeg",
+            "displaySequence": null,
+            "primary": null,
+            "uri": "http://images1.spies.dk/images/Hotel/HKTANAN1018_5_32.jpg?v=1"
+          },
+          {
+            "type": "image/jpeg",
+            "displaySequence": null,
+            "primary": null,
+            "uri": "http://images1.spies.dk/images/Hotel/HKTANAN1016_2_30.jpg?v=1"
+          },
+          {
+            "type": "image/jpeg",
+            "displaySequence": null,
+            "primary": null,
+            "uri": "http://images1.spies.dk/images/Hotel/HKTANAN1016_5_32.jpg?v=1"
+          },
+          {
+            "type": "image/jpeg",
+            "displaySequence": null,
+            "primary": null,
+            "uri": "http://images1.spies.dk/images/Hotel/HKTANAN1019_2_30.jpg?v=1"
+          },
+          {
+            "type": "image/jpeg",
+            "displaySequence": null,
+            "primary": null,
+            "uri": "http://images1.spies.dk/images/Hotel/HKTANAN1019_5_32.jpg?v=1"
+          },
+          {
+            "type": "image/jpeg",
+            "displaySequence": null,
+            "primary": null,
+            "uri": "http://images1.spies.dk/images/Hotel/HKTANAN1020_2_30.jpg?v=1"
+          },
+          {
+            "type": "image/jpeg",
+            "displaySequence": null,
+            "primary": null,
+            "uri": "http://images1.spies.dk/images/Hotel/HKTANAN1020_5_32.jpg?v=1"
+          },
+          {
+            "type": "image/jpeg",
+            "displaySequence": null,
+            "primary": null,
+            "uri": "http://images1.spies.dk/images/Hotel/HKTANAN1014_2_29.jpg?v=1"
+          },
+          {
+            "type": "image/jpeg",
+            "displaySequence": null,
+            "primary": null,
+            "uri": "http://images1.spies.dk/images/Hotel/HKTANAN1014_5_32.jpg?v=1"
+          }
+        ],
+        "large": [
+          {
+            "type": "image/jpeg",
+            "displaySequence": null,
+            "primary": null,
+            "uri": "http://images2.spies.dk/images/Hotel/HKTANAN1011_2_30.jpg"
+          },
+          {
+            "type": "image/jpeg",
+            "displaySequence": null,
+            "primary": null,
+            "uri": "http://images2.spies.dk/images/Hotel/HKTANAN1017_2_30.jpg"
+          },
+          {
+            "type": "image/jpeg",
+            "displaySequence": null,
+            "primary": null,
+            "uri": "http://images2.spies.dk/images/Hotel/HKTANAN1018_2_30.jpg"
+          },
+          {
+            "type": "image/jpeg",
+            "displaySequence": null,
+            "primary": null,
+            "uri": "http://images2.spies.dk/images/Hotel/HKTANAN1016_2_30.jpg"
+          },
+          {
+            "type": "image/jpeg",
+            "displaySequence": null,
+            "primary": null,
+            "uri": "http://images2.spies.dk/images/Hotel/HKTANAN1019_2_30.jpg"
+          },
+          {
+            "type": "image/jpeg",
+            "displaySequence": null,
+            "primary": null,
+            "uri": "http://images2.spies.dk/images/Hotel/HKTANAN1020_2_30.jpg"
+          }
+        ]
+      },
+      "starRating": 4.6,
+      "place": {
+        "name": "Karon Beach",
+        "country": "Thailand",
+        "region": "Phuket"
+      },
+      "description": "Charmerende og enkelt hotel tæt på både shopping og restauranter. Anan House er et godt udgangspunkt for dig, der hellere vil udforske Karon Beach og omgivelser end tilbringe ferien ved en hotelpool. De store turistgader i Karon Beach ligger kun et stykke væk, og der er gåafstand til stranden.\n\nI perioden oktober til april er de fleste af hotellets gæster fra Skandinavien.",
+      "concept": {
+        "id": "",
+        "title": ""
+      }
+    },
+    "flights": {
+      "outbound": [
+        {
+          "number": "na",
+          "departure": {
+            "localDateTime": "2016-12-13T16:10:00",
+            "airport": {
+              "code": "CPH",
+              "name": "Kastrup Terminal 2"
+            }
+          },
+          "arrival": {
+            "localDateTime": "2016-12-14T08:50:00",
+            "airport": {
+              "code": "HKT"
+            }
+          },
+          "carrier": {
+            "code": "DK"
+          }
+        }
+      ],
+      "inbound": [
+        {
+          "number": "na",
+          "departure": {
+            "localDateTime": "2017-01-03T11:00:00",
+            "airport": {
+              "code": "HKT",
+              "name": "Phuket"
+            }
+          },
+          "arrival": {
+            "localDateTime": "2017-01-04T17:05:00",
+            "airport": {
+              "code": "CPH"
+            }
+          },
+          "carrier": {
+            "code": "DK"
+          }
+        }
+      ]
+    },
+    "price": {
+      "total": 79855,
+      "perPerson": 16094,
+      "currency": "DKK",
+      "discountPrice": 0
+    },
+    "provider": {
+      "id": "lambda-searcher",
+      "reference": "HKTANAN",
+      "deepLink": "http://www.spies.dk/redir/BookRedirect.aspx?departureDate=2016-12-13&duration=22&departureCode=CPH&destinationCode=HKT&transportSerial=21&transportClass=R&hotelCode=ANAN&roomType=H12"
+    },
+    "nights": 21,
+    "amenities": {
+      "outdoorpool": false,
+      "distancetobeach": true,
+      "distancetocenter": "300 m",
+      "bar": false,
+      "childrenpool": false,
+      "elevator": false,
+      "poolbar": false,
+      "restaurant": true,
+      "minimarket": false,
+      "cleaningdaysperweek": "7",
+      "wifi": true,
+      "waterslide": false,
+      "lolloandbernie": false,
+      "isadulthotel": false,
+      "allinclusive": false
+    }
+  }
+}
