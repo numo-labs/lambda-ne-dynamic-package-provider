@@ -53,7 +53,7 @@ export LOG_LEVEL=fatal
 
 ### List of Trips for a 2 adults & 3 children
 
-When we request a list of ***trips*** with the following parameters:
+When we request a list of ***dptrips*** with the following parameters:
 ```js
 {
   adults: 2,
@@ -63,7 +63,7 @@ When we request a list of ***trips*** with the following parameters:
 
 This translates to the following API Path:
 ```sh
-/trips?adults=2&children=3
+/dptrips?adults=2&children=3
 ```
 
 Sample response (*just one trip*):
@@ -71,88 +71,91 @@ Sample response (*just one trip*):
 {
   "result": [
     {
-      "type": "UpdateTripInfo",
+      "tripKey": "5153814995943278140",
+      "tripDefinitionRuleId": 0,
+      "siteId": 11,
       "marketUnitCode": "SD",
-      "departureCode": "BLL",
-      "destinationCode": "LPA",
-      "departureDate": "2016-08-24T00:00:00",
-      "vitsSerialNumber": "31",
-      "vitsClassCode": "E",
-      "hotelCode": "ALTA",
-      "hotelDuration": 21,
-      "duration": 22,
-      "roomTypeCode": "A22CLL",
-      "flightAllotment": 4,
-      "hotelProductCode": "GA",
-      "price": 34845,
-      "numberOfAdults": 2,
-      "numberOfChildren": 3,
-      "paxPrice": 7549,
-      "discountPrice": 0,
-      "discountTotal": 0,
-      "numberOfRooms": 2,
-      "priorityCode": 68,
-      "wvHotelPartId": 10861,
-      "preloadedPriceId": 315593779,
-      "boardCode": "N ",
-      "insertedDate": "2015-12-06T03:56:01.327",
-      "tripId": 59724601,
-      "flightInfo": {
-        "outFlight": [
-          {
-            "destinationCode": "LPA",
-            "departureStationCode": "BLL",
-            "serialNumber": "31",
-            "aircraftCode": "A321",
-            "carrierCode": "DK",
-            "flightTime": "0510",
-            "departureStationName": "Billund",
-            "destinationName": "Gran Canaria",
-            "carrierName": "Thomas Cook Airlines",
-            "classCode": "E",
-            "className": "Economy Class",
-            "airCraftName": "Airbus A321",
-            "destinationCountryCode": "ES",
-            "startTime": "0001-01-01T00:00:00",
-            "departureTime": "2016-08-24T08:20:00",
-            "arrivalTime": "2016-08-24T12:30:00",
-            "checkinTime": "2016-08-24T07:20:00",
-            "displayDepartureDateTime": "2016-08-24T08:20:00",
-            "destinationCountryName": "Spanien",
-            "departureCountryName": "Danmark"
-          }
-        ],
-        "homeFlight": [
-          {
-            "destinationCode": "BLL",
-            "departureStationCode": "LPA",
-            "serialNumber": "31",
-            "aircraftCode": "A321",
-            "carrierCode": "DK",
-            "flightTime": "0450",
-            "departureStationName": "Gran Canaria",
-            "destinationName": "Billund",
-            "carrierName": "Thomas Cook Airlines",
-            "classCode": "E",
-            "className": "Economy Class",
-            "airCraftName": "Airbus A321",
-            "destinationCountryCode": "DK",
-            "startTime": "0001-01-01T00:00:00",
-            "departureTime": "2016-09-14T13:50:00",
-            "arrivalTime": "2016-09-14T19:40:00",
-            "checkinTime": "0001-01-01T00:00:00",
-            "displayDepartureDateTime": "2016-09-14T13:50:00",
-            "destinationCountryName": "Danmark",
-            "departureCountryName": "Spanien"
-          }
-        ]
-      },
-      "roomTypeDescription": "2-værelses Club Room, lavt beliggende",
-      "boardCodeDescription": "Ingen måltider",
-      "available": true,
-      "indexedDate": "2015-12-06T04:01:44.5825643+01:00",
-      "tripUrl": "http://www.travel.net/redir/BookRedirect.aspx?departureDate=2016-08-24&duration=22&departureCode=BLL&destinationCode=LPA&transportSerial=31&transportClass=E&hotelCode=ALTA&roomType=A22CLL",
-      "isLastMinuteSale": false
+      "worldviewId": 486,
+      "adults": 2,
+      "children": 0,
+      "duration": 3,
+      "departureDate": "2016-07-10T00:00:00",
+      "departureAirportWorldviewId": 1469,
+      "departureAirportCode": "BLL",
+      "price": 9074,
+      "discount": 0,
+      "currencyCode": "DKK",
+      "isAllInclusive": false,
+      "hotels": [
+        {
+          "sequence": 2,
+          "productCode": "HROMVIFR",
+          "boardCode": "B",
+          "roomtypeDescription": "Dobbeltværelse inkl. morgenmad",
+          "boardCodeDescription": "Morgenmad",
+          "hotelPartWorldviewId": 119525
+        }
+      ],
+      "flights": [
+        {
+          "sequence": 1,
+          "routes": [
+            {
+              "legs": [
+                {
+                  "destinationCode": "FRA",
+                  "carrierCode": "LH",
+                  "departureCode": "BLL",
+                  "departureDateTime": "2016-07-10T18:40:00",
+                  "arrivalDateTime": "2016-07-10T20:05:00",
+                  "flightNumber": "841"
+                },
+                {
+                  "destinationCode": "FCO",
+                  "carrierCode": "LH",
+                  "departureCode": "FRA",
+                  "departureDateTime": "2016-07-10T21:30:00",
+                  "arrivalDateTime": "2016-07-10T23:15:00",
+                  "flightNumber": "242"
+                }
+              ],
+              "flightTime": "0435",
+              "routeSequence": 1
+            },
+            {
+              "legs": [
+                {
+                  "destinationCode": "BRU",
+                  "carrierCode": "SN",
+                  "departureCode": "FCO",
+                  "departureDateTime": "2016-07-13T06:35:00",
+                  "arrivalDateTime": "2016-07-13T08:45:00",
+                  "flightNumber": "3188"
+                },
+                {
+                  "destinationCode": "BLL",
+                  "carrierCode": "SN",
+                  "departureCode": "BRU",
+                  "departureDateTime": "2016-07-13T09:45:00",
+                  "arrivalDateTime": "2016-07-13T11:20:00",
+                  "flightNumber": "2249"
+                }
+              ],
+              "flightTime": "0445",
+              "routeSequence": 2
+            }
+          ],
+          "marketingCarrierCode": "LH"
+        }
+      ],
+      "cruises": [],
+      "tours": [],
+      "transfers": [],
+      "tripItinerary": "1:F_2:A",
+      "expiryDate": "2016-07-05T19:34:19.5699716+02:00",
+      "indexedDate": "2016-07-04T19:34:19.9700205+02:00",
+      "tripUrl": "http://www.spies.dk/priceofferindependentaccomodationlist?QueryDepID=12676&QueryCtryID=6799&QueryAreaID=0&QueryResID=6800&QueryDepDate=20160710&QueryRetDate=20160713&QueryRoomAges=|42,42,&SelectedHotelCode=HROMVIFR&Price=9074&CategoryId=3&BestPrice=true",
+      "searchKey": "11|0|1469|486|2016-07-10|3|2_|1:F_2:A"
     }
   ]
 }
@@ -160,10 +163,10 @@ Sample response (*just one trip*):
 
 ### List of Hotels
 
-Given a list of trips (*from the trips API endpoint*) we still need to lookup
+Given a list of dptrips (*from the dptrips API endpoint*) we still need to lookup
 the Hotel details in order to get the photos, ratings, location, etc.
 
-So, imagine that you searched the `/trips` API endpoint for 2 adults and 3 children
+So, imagine that you searched the `/dptrips` API endpoint for 2 adults and 3 children
 (*see above for result sample*) you would then need to *extract* the HotelID
 from the packages results and *then* make a request to the `/hotels` endpoint
 to get the additional data. in the NE API the hotel has the key: `wvHotelPartId`
@@ -332,11 +335,6 @@ e.g: `"wvHotelPartId": 10861`
 ## Sample Package Result
 
 > See: [/test/sample_results/sample_package.json](https://github.com/numo-labs/lambda-ne-dynamic-package-provider/blob/master/test/sample_results/sample_package.json)
-
-For detail on minimizing bandwidth by reducing the size of
-package results returned to the client, see:
-https://github.com/numo-labs/lambda-ne-dynamic-package-provider/issues/84
-
 
 Read:
 + http://docs.aws.amazon.com/apigateway/latest/developerguide/getting-started-aws-proxy.html
