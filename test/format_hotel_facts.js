@@ -19,7 +19,6 @@ describe('format_hotel_facts', function () {
         amenities[k] = am[k] ? amenities[k] + 1 : amenities[k]; // increment
       });
     });
-    console.log('> Frequency of ocurrence for NE Amenities:\n', amenities);
     assert.ok(amenities.wifi > 300);
     done();
   });
@@ -29,7 +28,6 @@ describe('format_hotel_facts', function () {
     all_hotels.forEach(function (h) {
       count = !h.facts ? count + 1 : count; // count how many hotels don't have facts
     });
-    console.log(count + ' out of ' + all_hotels.length + ' Hotels do NOT have any facts (4Niki)');
     assert.ok(count === 0);
     done();
   });

@@ -1,5 +1,4 @@
 require('env2')('.env');
-var start = Date.now();
 var http_request = require('../lib/http_request');
 var fs = require('fs');
 var path = require('path');
@@ -33,20 +32,14 @@ var all_hotels = []; // ALL the hotels are temporarily stored in this array
 
 range.forEach(function (batch) { // parallel requests
   api_request(base + batch, function (err, res) {
-    console.error(err);
     assert(!err);
     res.Result.forEach(function (item) {
       all_hotels.push(item);
     });
 
-    // console.log('Count:', all_hotels.length);
     if (--count === 0) { // once all requests are done
       var all_hotels_file = sample_results + 'all_hotels.json'; // ALL The Hotels!
       fs.writeFileSync(all_hotels_file, JSON.stringify(all_hotels, null, 2));
-      var end = Date.now();
-      console.log('Hotel results:', all_hotels.length);
-      console.log('Fixture created:', all_hotels_file);
-      console.log('Time taken: ' + (end - start) + ' ms');
     }
   });
 });

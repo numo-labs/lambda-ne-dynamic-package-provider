@@ -25,11 +25,9 @@ describe('Thailand End-to-End Test', function () {
     handler(real_event, CONTEXT, callback);
   });
   it('Test CACHE for thailand', function (done) {
-    var start = Date.now();
     CONTEXT.invokedFunctionArn = 'arn:aws:lambda:eu-west-1:12345:function:LambdaTest:ci';
     var callback = function (err, result) {
       assert(arguments[1] > 1);
-      console.log('Took:', Date.now() - start, 'ms');
       done();
     };
     handler(real_event, CONTEXT, callback);
@@ -48,12 +46,10 @@ describe('Spain End-to-End Test with Departure Date and Airport!', function () {
     handler(complete_event, CONTEXT, callback);
   });
   it('Complete Cache Hit', function (done) {
-    var start = Date.now();
     CONTEXT.invokedFunctionArn = 'arn:aws:lambda:eu-west-1:655240711487:function:LambdaTest:$LATEST';
     var callback = function (err, result) {
       COUNT = arguments[1];
       assert(COUNT > 1);
-      console.log('Took:', Date.now() - start, 'ms to complete.');
       done();
     };
     handler(complete_event, CONTEXT, callback);

@@ -1,29 +1,29 @@
 {
   "type": "package",
-  "id": "HKTANAN",
-  "url": "/123456/HKTANAN",
+  "id": "HAMHHKTKATH",
+  "url": "/123456/HAMHHKTKATH",
   "packageOffer": {
     "hotel": {
-      "name": "Anan House",
+      "name": "Katathani Phuket Beach Resort",
       "images": {
         "small": [
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTANAN1011_1_13.jpg?v=1"
+            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1095_1_13.jpg?v=11"
           }
         ]
       },
       "starRating": 4.6,
       "place": {
-        "name": "Karon Beach",
+        "name": "Kata Beach",
         "country": "Thailand",
         "region": "Phuket"
       },
       "concept": {
-        "id": "",
-        "title": ""
+        "id": "familyTopSelection",
+        "title": "Family Top Selection"
       }
     },
     "flights": {
@@ -31,20 +31,19 @@
         {
           "number": "na",
           "departure": {
-            "localDateTime": "2016-12-13T16:10:00",
+            "localDateTime": "2016-12-31T01:50:00",
             "airport": {
-              "code": "CPH",
-              "name": "Kastrup Terminal 2"
+              "code": "HKT",
+              "name": ""
             }
           },
           "arrival": {
-            "localDateTime": "2016-12-14T08:50:00",
             "airport": {
-              "code": "HKT"
+              "code": "HAM"
             }
           },
           "carrier": {
-            "code": "DK"
+            "code": "CZ,CZ,CZ"
           }
         }
       ],
@@ -52,35 +51,37 @@
         {
           "number": "na",
           "departure": {
-            "localDateTime": "2017-01-03T11:00:00",
+            "localDateTime": "2016-12-31T01:50:00",
             "airport": {
               "code": "HKT",
-              "name": "Phuket"
+              "name": ""
             }
           },
           "arrival": {
-            "localDateTime": "2017-01-04T17:05:00",
             "airport": {
-              "code": "CPH"
+              "code": "HAM"
             }
           },
           "carrier": {
-            "code": "DK"
+            "code": "CZ,CZ,CZ"
           }
         }
       ]
     },
     "price": {
-      "total": 79855,
-      "perPerson": 16094,
+      "total": 68222,
+      "perPerson": "13645.00",
       "currency": "DKK",
       "discountPrice": 0
     },
     "provider": {
       "id": "lambda-searcher",
-      "reference": "HKTANAN",
-      "deepLink": "http://www.spies.dk/redir/BookRedirect.aspx?departureDate=2016-12-13&duration=22&departureCode=CPH&destinationCode=HKT&transportSerial=21&transportClass=R&hotelCode=ANAN&roomType=H12"
+      "reference": "HAMHHKTKATH",
+      "deepLink": "http://www.spies.dk/priceofferindependentaccomodationlist?QueryDepID=13305&QueryCtryID=4696&QueryAreaID=0&QueryResID=4784&QueryDepDate=20161224&QueryRetDate=20161231&QueryRoomAges=|42,42,17,14,11&SelectedHotelCode=HHKTKATH&Price=68222&CategoryId=3&BestPrice=true"
     },
-    "nights": 21
+    "nights": 7,
+    "destinationCode": "HAM",
+    "destinationName": "unavailable",
+    "departureCode": "HKT"
   }
 }

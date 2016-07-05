@@ -4,7 +4,6 @@ var fs = require('fs');
 var path = require('path');
 var dir = path.resolve(__dirname + '/sample_results/') + '/';
 var AwsHelper = require('aws-lambda-helper');
-// console.log('>>' + dir);
 
 describe('api_request', function () {
   before(function (done) {
@@ -36,19 +35,14 @@ describe('api_request', function () {
     var params = { // leave "path" and "stage" unset
       adults: 2,
       children: 3,
-      allInclusive: 'true', // yes these values are strings not boolean!
-      lmsOnly: 'true',
-      hotelIds: '139891,122133,14044,121633,109622,107706,10567,10564,10617,10573,11276',
-      searchId: 12345,
-      id: 67890,
-      userId: 'test'
+      hotelIds: '7254,139891,122133,14044,121633,109622,107706,10567,10564,10617,10573,11276'
     };
     api_request(params, function (err, json) {
       assert.equal(err, null, 'No errors requesting results from API');
       var sample_filename = dir + 'NE_trips_with_hotels.json';
       fs.writeFileSync(sample_filename, JSON.stringify(json, null, 2));
-      assert(json.result.length > 0);
-      assert(json.totalHits > 0);
+      assert(json.result.length > 0, 'Nothing returned from json');
+      assert(json.totalHits > 0, 'Total hits are 0');
       done();
     });
   });
@@ -57,14 +51,12 @@ describe('api_request', function () {
     var params = { // leave "path" and "stage" unset
       adults: 2,
       children: 3,
-      allInclusive: 'true', // yes these values are strings not boolean!
-      lmsOnly: 'true',
-      hotelIds: '139891,122133,14044,121633,109622,107706,10567,10564,10617,10573,11276'
+      hotelIds: '7254,139891,122133,14044,121633,109622,107706,10567,10564,10617,10573,11276'
     };
     api_request(params, function (err, json) {
       assert.equal(err, null, 'No errors requesting results from API (CACHE)');
-      assert(json.result.length > 0);
-      assert(json.totalHits > 0);
+      assert(json.result.length > 0, 'No results returned');
+      assert(json.totalHits > 0, 'No results returned');
       done();
     });
   });

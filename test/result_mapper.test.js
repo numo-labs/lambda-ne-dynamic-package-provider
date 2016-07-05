@@ -19,7 +19,6 @@ describe('Map the hotel results by their hotel id', function () {
     var hotelId = HID;
     var name = sample_hotels_result[0].name;
     var result = mapper.map_hotels_by_hotel_id(sample_hotels_result);
-    // console.log(result[hotelId]);
     assert.equal(result[hotelId].name, name, 'Hotel name: ' + result[hotelId].name);
     done();
   });
@@ -50,9 +49,7 @@ describe('Map to extract relevant fields from hotel images', function () {
   it('map_hotels_by_hotel_id transforms an NE Hotels API query array into an object', function (done) {
     var hotelId = HID;
     var hotels_map = mapper.map_hotels_by_hotel_id(sample_hotels_result);
-    // console.log(hotels_map[hotelId]);
     var result = mapper.map_hotel_images(hotels_map[hotelId].images);
-    // console.log(result[0]);
     assert.equal(result[0].uri, hotels_map[hotelId].images[0].url);
     assert.equal(result.length, hotels_map[hotelId].images.length);
     var expected_keys = [ 'type', 'displaySequence', 'primary', 'uri' ];
@@ -66,16 +63,6 @@ describe('Transform NE API Flight details to Standard Format', function () {
     var flights = sample_packages_result.result[0].packageOffer.flights; // list of flights
     var expected_keys = ['outbound', 'inbound'];
     assert.deepEqual(Object.keys(flights), expected_keys);
-    done();
-  });
-});
-
-describe('Get Currency Code from Market ID', function () {
-  it('get_currency_code returns currency code from market id', function (done) {
-    var result = mapper.get_currency_code('SD');
-    assert.equal(result, 'DKK');
-    var default_currency = mapper.get_currency_code('Timbuktu');
-    assert.equal(default_currency, 'EUR');
     done();
   });
 });
@@ -97,7 +84,6 @@ describe('Use NE Product SKU as provider.reference', function () {
     var result = sample_packages_result.result[0];
 
     var id = sample_packages_result.result[0].id;
-    // console.log(pkg);
     // var ref = pkg.destinationCode + pkg.hotelCode;
     assert.equal(result.packageOffer.provider.reference, id);
     done();
@@ -110,7 +96,6 @@ describe('Format result for client (reduce amount of data sent)', function () {
     var item = sample_packages_result.result[0];
     item.url = '/123456/' + item.id; // by default results don't have url
     var min = mapper.minimiseBandwidth(item);
-    // console.log(JSON.stringify(min, null, 2));
     assert.equal(item.type, min.type);
     assert.equal(item.id, min.id);
     assert.equal(item.url, min.url);
@@ -130,8 +115,6 @@ describe('Format result for client (reduce amount of data sent)', function () {
     var itemLength = JSON.stringify(item).length;
     var minlength = JSON.stringify(min).length;
     assert(minlength < itemLength / 2);
-    console.log('   > Saved:',
-      Math.floor(((itemLength - minlength) / itemLength) * 100) + '% bandwidth!');
     done();
   });
 });
