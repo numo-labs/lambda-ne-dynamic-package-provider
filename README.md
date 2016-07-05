@@ -1,8 +1,6 @@
 ## Lambda Northern Europe (NE) Dynamic Package (Holiday) Provider
 
-[![Codeship](https://img.shields.io/codeship/d78bd820-c6c7-0133-6694-1ac1b065c1d6/master.svg)](https://codeship.com/projects/138820)
-[![Codecov](https://img.shields.io/codecov/c/github/numo-labs/lambda-ne-dynamic-package-provider.svg)](https://codecov.io/gh/numo-labs/lambda-ne-dynamic-package-provider)
-[![Code Climate](https://codeclimate.com/github/numo-labs/lambda-ne-dynamic-package-provider/badges/gpa.svg)](https://codeclimate.com/github/numo-labs/lambda-ne-dynamic-package-provider)
+[![Codeship](https://img.shields.io/codeship/74c5e930-19f1-0134-ab85-4ecfcf5b1540/master.svg)](https://codeship.com/projects/138820)
 [![Dependency Status](https://david-dm.org/numo-labs/lambda-ne-dynamic-package-provider.svg)](https://david-dm.org/numo-labs/lambda-ne-dynamic-package-provider)
 [![devDependency Status](https://david-dm.org/numo-labs/lambda-ne-dynamic-package-provider/dev-status.svg)](https://david-dm.org/numo-labs/lambda-ne-dynamic-package-provider#info=devDependencies)
 
