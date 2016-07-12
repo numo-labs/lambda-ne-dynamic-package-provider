@@ -1,233 +1,221 @@
 {
   "type": "package",
-  "id": "HAMHHKTKATH",
+  "id": "HLPAACIB",
   "packageOffer": {
     "priorityCode": "unavailable",
     "hotel": {
-      "name": "Katathani Phuket Beach Resort",
+      "name": "AC Iberia Las Palmas",
       "images": {
         "small": [
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1095_1_13.jpg?v=11"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1034_1_13.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1095_10_51.jpg?v=11"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1034_1_51.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1095_2_30.jpg?v=29"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1034_2_30.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1095_3_15.jpg?v=11"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1034_3_15.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1095_4_14.jpg?v=11"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1034_4_14.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1095_5_32.jpg?v=11"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1034_5_32.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1095_6_16.jpg?v=11"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1034_6_16.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1095_7_20.jpg?v=11"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1034_7_20.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1095_8_17.jpg?v=11"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1034_8_17.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1095_9_46.jpg?v=11"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1020_2_30.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1097_2_30.jpg?v=29"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1020_5_32.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1048_2_30.jpg?v=29"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1027_2_30.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1085_2_30.jpg?v=29"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1027_5_32.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1106_2_30.jpg?v=28"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1025_2_30.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1107_2_30.jpg?v=28"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1025_5_32.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1108_2_30.jpg?v=28"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1024_2_30.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1109_2_30.jpg?v=28"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1024_5_32.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1066_2_30.jpg?v=29"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1026_2_29.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1062_2_30.jpg?v=29"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1026_5_32.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1049_2_30.jpg?v=29"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1028_2_30.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1103_2_29.jpg?v=12"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1028_5_32.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1063_2_29.jpg?v=12"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1036_2_30.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1067_2_29.jpg?v=12"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1036_5_32.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1042_2_30.jpg?v=29"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1021_2_30.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1102_2_30.jpg?v=29"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1021_5_32.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1065_2_30.jpg?v=29"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1022_2_30.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1092_2_30.jpg?v=29"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1022_5_32.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1105_2_30.jpg?v=28"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1033_2_30.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1086_2_30.jpg?v=29"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1033_5_32.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1098_2_30.jpg?v=29"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1037_2_30.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1054_2_30.jpg?v=29"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1037_5_32.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1096_2_30.jpg?v=29"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1038_2_30.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1111_2_30.jpg?v=8"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1038_5_32.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1112_2_30.jpg?v=8"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1032_2_30.jpg?v=1"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1100_2_30.jpg?v=29"
-          },
-          {
-            "type": "image/jpeg",
-            "displaySequence": null,
-            "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1104_2_30.jpg?v=29"
-          },
-          {
-            "type": "image/jpeg",
-            "displaySequence": null,
-            "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1101_2_30.jpg?v=29"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1032_5_32.jpg?v=1"
           }
         ],
         "large": [
@@ -235,170 +223,92 @@
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images2.spies.dk/images/Hotel/HKTKATA1095_2_30.jpg"
+            "uri": "http://images2.spies.dk/images/Hotel/LPAACIB1034_2_30.jpg"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images2.spies.dk/images/Hotel/HKTKATA1097_2_30.jpg"
+            "uri": "http://images2.spies.dk/images/Hotel/LPAACIB1020_2_30.jpg"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images2.spies.dk/images/Hotel/HKTKATA1085_2_30.jpg"
+            "uri": "http://images2.spies.dk/images/Hotel/LPAACIB1027_2_30.jpg"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images2.spies.dk/images/Hotel/HKTKATA1048_2_30.jpg"
+            "uri": "http://images2.spies.dk/images/Hotel/LPAACIB1025_2_30.jpg"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images2.spies.dk/images/Hotel/HKTKATA1106_2_30.jpg"
+            "uri": "http://images2.spies.dk/images/Hotel/LPAACIB1028_2_30.jpg"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images2.spies.dk/images/Hotel/HKTKATA1107_2_30.jpg"
+            "uri": "http://images2.spies.dk/images/Hotel/LPAACIB1024_2_30.jpg"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images2.spies.dk/images/Hotel/HKTKATA1108_2_30.jpg"
+            "uri": "http://images2.spies.dk/images/Hotel/LPAACIB1036_2_30.jpg"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images2.spies.dk/images/Hotel/HKTKATA1109_2_30.jpg"
+            "uri": "http://images2.spies.dk/images/Hotel/LPAACIB1021_2_30.jpg"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images2.spies.dk/images/Hotel/HKTKATA1066_2_30.jpg"
+            "uri": "http://images2.spies.dk/images/Hotel/LPAACIB1022_2_30.jpg"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images2.spies.dk/images/Hotel/HKTKATA1062_2_30.jpg"
+            "uri": "http://images2.spies.dk/images/Hotel/LPAACIB1033_2_30.jpg"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images2.spies.dk/images/Hotel/HKTKATA1049_2_30.jpg"
+            "uri": "http://images2.spies.dk/images/Hotel/LPAACIB1037_2_30.jpg"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images2.spies.dk/images/Hotel/HKTKATA1042_2_30.jpg"
+            "uri": "http://images2.spies.dk/images/Hotel/LPAACIB1038_2_30.jpg"
           },
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images2.spies.dk/images/Hotel/HKTKATA1102_2_30.jpg"
-          },
-          {
-            "type": "image/jpeg",
-            "displaySequence": null,
-            "primary": null,
-            "uri": "http://images2.spies.dk/images/Hotel/HKTKATA1065_2_30.jpg"
-          },
-          {
-            "type": "image/jpeg",
-            "displaySequence": null,
-            "primary": null,
-            "uri": "http://images2.spies.dk/images/Hotel/HKTKATA1069_2_30.jpg"
-          },
-          {
-            "type": "image/jpeg",
-            "displaySequence": null,
-            "primary": null,
-            "uri": "http://images2.spies.dk/images/Hotel/HKTKATA1092_2_30.jpg"
-          },
-          {
-            "type": "image/jpeg",
-            "displaySequence": null,
-            "primary": null,
-            "uri": "http://images2.spies.dk/images/Hotel/HKTKATA1105_2_30.jpg"
-          },
-          {
-            "type": "image/jpeg",
-            "displaySequence": null,
-            "primary": null,
-            "uri": "http://images2.spies.dk/images/Hotel/HKTKATA1086_2_30.jpg"
-          },
-          {
-            "type": "image/jpeg",
-            "displaySequence": null,
-            "primary": null,
-            "uri": "http://images2.spies.dk/images/Hotel/HKTKATA1098_2_30.jpg"
-          },
-          {
-            "type": "image/jpeg",
-            "displaySequence": null,
-            "primary": null,
-            "uri": "http://images2.spies.dk/images/Hotel/HKTKATA1054_2_30.jpg"
-          },
-          {
-            "type": "image/jpeg",
-            "displaySequence": null,
-            "primary": null,
-            "uri": "http://images2.spies.dk/images/Hotel/HKTKATA1096_2_30.jpg"
-          },
-          {
-            "type": "image/jpeg",
-            "displaySequence": null,
-            "primary": null,
-            "uri": "http://images2.spies.dk/images/Hotel/HKTKATA1041_2_30.jpg"
-          },
-          {
-            "type": "image/jpeg",
-            "displaySequence": null,
-            "primary": null,
-            "uri": "http://images2.spies.dk/images/Hotel/HKTKATA1040_2_30.jpg"
-          },
-          {
-            "type": "image/jpeg",
-            "displaySequence": null,
-            "primary": null,
-            "uri": "http://images2.spies.dk/images/Hotel/HKTKATA1100_2_30.jpg"
-          },
-          {
-            "type": "image/jpeg",
-            "displaySequence": null,
-            "primary": null,
-            "uri": "http://images2.spies.dk/images/Hotel/HKTKATA1104_2_30.jpg"
-          },
-          {
-            "type": "image/jpeg",
-            "displaySequence": null,
-            "primary": null,
-            "uri": "http://images2.spies.dk/images/Hotel/HKTKATA1101_2_30.jpg"
+            "uri": "http://images2.spies.dk/images/Hotel/LPAACIB1032_2_30.jpg"
           }
         ]
       },
-      "starRating": 4.6,
+      "starRating": 4.2,
       "place": {
-        "name": "Kata Beach",
-        "country": "Thailand",
-        "region": "Phuket"
+        "name": "Las Palmas",
+        "country": "Spanien",
+        "region": "Gran Canaria"
       },
-      "description": "Eksklusivt og elegant lukusushotel for hele familien. Her bor du lige ved Kata Noi-stranden og tæt på shopping og restauranter i Kata Beach. Katathani Phuket Beach Resort består af to hotelområder: Thani Wing tættest på stranden og Bhuri Wing lidt længere oppe i området. Thani Wing og Bhuri Wing har hver sit poolområde med flere pools. Som gæst har du adgang til hele hotellet. Katathani Phuket Beach Resort har bl.a. en børneklub, flere hyggelige restauranter og en flot spaafdeling.",
+      "description": "AC Iberia Las Palmas er et stort hotel med flot og moderne interiør beliggende i udkanten af Las Palmas. Hotellet har en a la carte-restaurant, et cafeteria og en bar samt en dejlig tagterrasse med pool. Hvis du vil motionere, har hotellet desuden et lille motionsrum med udsigt over havet. Fra AC Iberia Las Palmas har du gåafstand til den gamle bydel Vegueta, hvor der ligger hyggelige restauranter og barer. \n\nHotellet er velegnet til voksne, der rejser uden børn. Vi kan dog ikke garantere, at hotellet er helt børnefrit.",
       "concept": {
-        "id": "familyTopSelection",
-        "title": "Family Top Selection"
+        "id": "",
+        "title": ""
       }
     },
     "flights": {
@@ -406,9 +316,9 @@
         {
           "number": "na",
           "departure": {
-            "localDateTime": "2016-12-31T01:50:00",
+            "localDateTime": "2016-07-24T09:00:00",
             "airport": {
-              "code": "HKT",
+              "code": "LPA",
               "name": ""
             }
           },
@@ -418,7 +328,7 @@
             }
           },
           "carrier": {
-            "code": "CZ,CZ,CZ"
+            "code": "D8"
           }
         }
       ],
@@ -426,9 +336,9 @@
         {
           "number": "na",
           "departure": {
-            "localDateTime": "2016-12-31T01:50:00",
+            "localDateTime": "2016-07-24T09:00:00",
             "airport": {
-              "code": "HKT",
+              "code": "LPA",
               "name": ""
             }
           },
@@ -438,42 +348,42 @@
             }
           },
           "carrier": {
-            "code": "CZ,CZ,CZ"
+            "code": "D8"
           }
         }
       ]
     },
     "price": {
-      "total": 68222,
-      "perPerson": "13645.00",
+      "total": 42722,
+      "perPerson": "8545.00",
       "currency": "DKK",
       "discountPrice": 0
     },
     "provider": {
       "id": "lambda-searcher",
-      "reference": "HAMHHKTKATH",
-      "deepLink": "http://www.spies.dk/priceofferindependentaccomodationlist?QueryDepID=13305&QueryCtryID=4696&QueryAreaID=0&QueryResID=4784&QueryDepDate=20161224&QueryRetDate=20161231&QueryRoomAges=|42,42,17,14,11&SelectedHotelCode=HHKTKATH&Price=68222&CategoryId=3&BestPrice=true"
+      "reference": "HLPAACIB",
+      "deepLink": "http://www.spies.dk/priceofferindependentaccomodationlist?QueryDepID=13305&QueryCtryID=4826&QueryAreaID=8775&QueryResID=0&QueryDepDate=20160717&QueryRetDate=20160724&QueryRoomAges=|42,42,17,17,14&SelectedHotelCode=HLPAACIB&Price=42722&CategoryId=3&BestPrice=true"
     },
     "nights": 7,
     "amenities": {
-      "outdoorpool": "6 stk.",
-      "distancetobeach": "0 m",
-      "distancetocenter": "0 m",
-      "bar": "5 stk.",
-      "childrenpool": true,
+      "outdoorpool": true,
+      "distancetobeach": "3,5 km",
+      "distancetocenter": true,
+      "bar": true,
+      "childrenpool": false,
       "elevator": true,
-      "poolbar": true,
-      "restaurant": "6",
-      "minimarket": true,
+      "poolbar": false,
+      "restaurant": true,
+      "minimarket": false,
       "cleaningdaysperweek": "7",
       "wifi": true,
-      "waterslide": "ved én af hotellets pools",
+      "waterslide": false,
       "lolloandbernie": false,
       "isadulthotel": false,
       "allinclusive": false
     },
     "destinationCode": "HAM",
     "destinationName": "unavailable",
-    "departureCode": "HKT"
+    "departureCode": "LPA"
   }
 }

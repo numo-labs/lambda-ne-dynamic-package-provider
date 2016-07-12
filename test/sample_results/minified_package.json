@@ -1,29 +1,29 @@
 {
   "type": "package",
-  "id": "HAMHHKTKATH",
-  "url": "/123456/HAMHHKTKATH",
+  "id": "HLPAACIB",
+  "url": "/123456/HLPAACIB",
   "packageOffer": {
     "hotel": {
-      "name": "Katathani Phuket Beach Resort",
+      "name": "AC Iberia Las Palmas",
       "images": {
         "small": [
           {
             "type": "image/jpeg",
             "displaySequence": null,
             "primary": null,
-            "uri": "http://images1.spies.dk/images/Hotel/HKTKATA1095_1_13.jpg?v=11"
+            "uri": "http://images1.spies.dk/images/Hotel/LPAACIB1034_1_13.jpg?v=1"
           }
         ]
       },
-      "starRating": 4.6,
+      "starRating": 4.2,
       "place": {
-        "name": "Kata Beach",
-        "country": "Thailand",
-        "region": "Phuket"
+        "name": "Las Palmas",
+        "country": "Spanien",
+        "region": "Gran Canaria"
       },
       "concept": {
-        "id": "familyTopSelection",
-        "title": "Family Top Selection"
+        "id": "",
+        "title": ""
       }
     },
     "flights": {
@@ -31,9 +31,9 @@
         {
           "number": "na",
           "departure": {
-            "localDateTime": "2016-12-31T01:50:00",
+            "localDateTime": "2016-07-24T09:00:00",
             "airport": {
-              "code": "HKT",
+              "code": "LPA",
               "name": ""
             }
           },
@@ -43,7 +43,7 @@
             }
           },
           "carrier": {
-            "code": "CZ,CZ,CZ"
+            "code": "D8"
           }
         }
       ],
@@ -51,9 +51,9 @@
         {
           "number": "na",
           "departure": {
-            "localDateTime": "2016-12-31T01:50:00",
+            "localDateTime": "2016-07-24T09:00:00",
             "airport": {
-              "code": "HKT",
+              "code": "LPA",
               "name": ""
             }
           },
@@ -63,25 +63,25 @@
             }
           },
           "carrier": {
-            "code": "CZ,CZ,CZ"
+            "code": "D8"
           }
         }
       ]
     },
     "price": {
-      "total": 68222,
-      "perPerson": "13645.00",
+      "total": 42722,
+      "perPerson": "8545.00",
       "currency": "DKK",
       "discountPrice": 0
     },
     "provider": {
       "id": "lambda-searcher",
-      "reference": "HAMHHKTKATH",
-      "deepLink": "http://www.spies.dk/priceofferindependentaccomodationlist?QueryDepID=13305&QueryCtryID=4696&QueryAreaID=0&QueryResID=4784&QueryDepDate=20161224&QueryRetDate=20161231&QueryRoomAges=|42,42,17,14,11&SelectedHotelCode=HHKTKATH&Price=68222&CategoryId=3&BestPrice=true"
+      "reference": "HLPAACIB",
+      "deepLink": "http://www.spies.dk/priceofferindependentaccomodationlist?QueryDepID=13305&QueryCtryID=4826&QueryAreaID=8775&QueryResID=0&QueryDepDate=20160717&QueryRetDate=20160724&QueryRoomAges=|42,42,17,17,14&SelectedHotelCode=HLPAACIB&Price=42722&CategoryId=3&BestPrice=true"
     },
     "nights": 7,
     "destinationCode": "HAM",
     "destinationName": "unavailable",
-    "departureCode": "HKT"
+    "departureCode": "LPA"
   }
 }
