@@ -78,18 +78,6 @@ describe('Map results and hotels', function () {
   });
 });
 
-describe('Use NE Product SKU as provider.reference', function () {
-  it('SKU is made from destinationCode + hotelCode', function (done) {
-    // var result = mapper.map_ne_result_to_graphql(sample_packages_result.result, sample_hotels_result.result);
-    var result = sample_packages_result.result[0];
-
-    var id = sample_packages_result.result[0].id;
-    // var ref = pkg.destinationCode + pkg.hotelCode;
-    assert.equal(result.packageOffer.provider.reference, id);
-    done();
-  });
-});
-
 describe('Format result for client (reduce amount of data sent)', function () {
   it('minimiseBandwidth reduces the amount of data sent to the client', function (done) {
     // var result = mapper.map_ne_result_to_graphql(sample_packages_result.result, sample_hotels_result.result);
