@@ -1,4 +1,8 @@
+'use strict';
+
 require('env2')('.env');
+const sinon = require('sinon');
+
 var AwsHelper = require('aws-lambda-helper');
 AwsHelper.init({
   invokedFunctionArn: 'arn:aws:lambda:eu-west-1:123456789:function:mylambda:ci'
@@ -33,6 +37,13 @@ describe('parse_sns', function () {
 });
 
 describe('get_age', function () {
+  let clock;
+  beforeEach(() => {
+    clock = sinon.useFakeTimers((new Date(2016, 7, 15)).getTime());
+  });
+  afterEach(() => {
+    clock.restore();
+  });
   it('gets the age in years of a passenger given her birth date', function (done) {
     var DOB = '1986-07-14'; // Jimmy's test!
     assert(parse_sns.get_age(DOB) === 30);
