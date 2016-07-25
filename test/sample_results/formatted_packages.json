@@ -406,19 +406,19 @@
         {
           "number": "na",
           "departure": {
-            "localDateTime": "2016-10-28T16:55:00",
+            "localDateTime": "2016-10-14T11:50:00",
             "airport": {
-              "code": "HKT",
+              "code": "CPH",
               "name": ""
             }
           },
           "arrival": {
             "airport": {
-              "code": "CPH"
+              "code": "HKT"
             }
           },
           "carrier": {
-            "code": "AY,AY,AY"
+            "code": "KL,KL,KL"
           }
         }
       ],
@@ -426,7 +426,7 @@
         {
           "number": "na",
           "departure": {
-            "localDateTime": "2016-10-28T16:55:00",
+            "localDateTime": "2016-10-29T20:25:00",
             "airport": {
               "code": "HKT",
               "name": ""
@@ -438,23 +438,23 @@
             }
           },
           "carrier": {
-            "code": "AY,AY,AY"
+            "code": "AZ,AZ,AZ"
           }
         }
       ]
     },
     "price": {
-      "total": 57043,
-      "perPerson": "11409.00",
+      "total": 52432,
+      "perPerson": "10487.00",
       "currency": "DKK",
       "discountPrice": 0
     },
     "provider": {
       "id": "lambda-searcher",
       "reference": "HHKTKATH",
-      "deepLink": "http://www.spies.dk/priceofferindependentaccomodationlist?QueryDepID=12678&QueryCtryID=4696&QueryAreaID=4762&QueryResID=0&QueryDepDate=20161014&QueryRetDate=20161028&QueryRoomAges=|42,42,13,10,6&SelectedHotelCode=HHKTKATH&Price=57043&CategoryId=3&BestPrice=true"
+      "deepLink": "http://www.spies.dk/priceofferindependentaccomodationlist?QueryDepID=12678&QueryCtryID=4696&QueryAreaID=0&QueryResID=4784&QueryDepDate=20161014&QueryRetDate=20161029&QueryRoomAges=|42,42,16,11,1&SelectedHotelCode=HHKTKATH&Price=52432&CategoryId=3&BestPrice=true"
     },
-    "nights": 14,
+    "nights": 15,
     "amenities": {
       "outdoorpool": "6 stk.",
       "distancetobeach": "0 m",
@@ -472,8 +472,8 @@
       "isadulthotel": false,
       "allinclusive": false
     },
-    "destinationCode": "CPH",
+    "destinationCode": "HKT",
     "destinationName": "unavailable",
-    "departureCode": "HKT"
+    "departureCode": "CPH"
   }
 }
