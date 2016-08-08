@@ -58,19 +58,18 @@ exports.handler = function (event, context, callback) {
     }
   }).on('result', function (body) {
     resultsReturned++;
+    delete body.hotelIds; // don't need hotelIds again https://git.io/voIAS
     body.items = body.items.map(function (item) { // so update the list of items
       item.url = params.searchId + '/' + item.id; // to include an item.url
       return item;
     });
+    body.items = body.items.map(mapper.minimiseBandwidth); // minimal fields
     AwsHelper.log.trace({ result: body.items[0] }, 'Sending dynamic package result');
     AwsHelper.pushResultToClient(body, function (err, data) {
       /* istanbul ignore if */
       if (err) {
         AwsHelper.log.error({ err: err }, 'Error pushing results to client');
       }
-      delete body.hotelIds; // don't need hotelIds again https://git.io/voIAS
-      body.items = body.items.map(mapper.minimiseBandwidth); // minimal fields
-      body.searchComplete = false;
     });
   });
 };
