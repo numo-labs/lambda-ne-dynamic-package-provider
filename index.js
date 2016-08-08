@@ -62,7 +62,7 @@ exports.handler = function (event, context, callback) {
       item.url = params.searchId + '/' + item.id; // to include an item.url
       return item;
     });
-
+    AwsHelper.log.trace({ result: body.items[0] }, 'Sending dynamic package result');
     AwsHelper.pushResultToClient(body, function (err, data) {
       /* istanbul ignore if */
       if (err) {
