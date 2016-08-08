@@ -64,12 +64,14 @@ exports.handler = function (event, context, callback) {
       return item;
     });
     body.items = body.items.map(mapper.minimiseBandwidth); // minimal fields
-    AwsHelper.log.trace({ result: body.items[0] }, 'Sending dynamic package result');
+    const id = body.items.length ? body.items[0].id : null;
+    AwsHelper.log.trace({ result_id: id }, 'Sending dynamic package result');
     AwsHelper.pushResultToClient(body, function (err, data) {
       /* istanbul ignore if */
       if (err) {
-        AwsHelper.log.error({ err: err }, 'Error pushing results to client');
+        return AwsHelper.log.error({ err: err }, 'Error pushing results to client');
       }
+      AwsHelper.log.trace({ result_id: id }, 'Sent dynamic package result');
     });
   });
 };
