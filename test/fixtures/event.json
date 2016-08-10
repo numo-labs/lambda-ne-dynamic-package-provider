@@ -1,0 +1,22 @@
+{
+  "Records": [
+    {
+      "EventSource": "aws:sns",
+      "EventVersion": "1.0",
+      "EventSubscriptionArn": "arn:aws:sns:eu-west-1:123456789:search-request-v1-ci:8ae5eab4-02c9-4901-939a-d27e002f1005",
+      "Sns": {
+        "Type": "Notification",
+        "MessageId": "1ffc5c3b-3a54-5c9c-9fba-1395bb02bd47",
+        "TopicArn": "arn:aws:sns:eu-west-1:123456789:search-request-v1-ci",
+        "Subject": null,
+        "Message": "{\"query\":{\"passengers\":[{\"birthday\":\"1996-04-12\"},{\"birthday\":\"1996-04-12\"}],\"departureAirports\":[\"airport:master.CPH\"],\"marketing\":[\"marketing:term.diving\"],\"hotels\":[]},\"context\":{\"searchId\":\"e5cf7ca0-1841-11e6-ad87-a5bf724bca4f\",\"market\":\"DK\",\"language\":\"da\",\"userId\":\"testuser\",\"connectionId\":\"testcon123\"},\"headers\":{\"trace-request-id\":\"dc7815a4-ad2b-4dbc-8a68-7d970d72a982\"},\"content\":{\"hotels\":[\"hotel:ne.wvid.119870\",\"hotel:ne.wvid.118060\"],\"tiles\":[\"tile:article.dk.29\"]},\"headers\":{\"trace-request-id\":\"dc7815a4-ad2b-4dbc-8a68-7d970d72a982\"}}",
+        "Timestamp": "2016-05-12T13:03:18.921Z",
+        "SignatureVersion": "1",
+        "Signature": "Z5ZxQuo9pL17+L71dNv9iIFCFUYdbaLge5+lU0lIFOiqE4MJ8Hdzj8wnVpkwUmIinB/2lWJ2AK+li/WcLjmNXy9TVB1pAtn3HVZIwSBnLfPkDlLzoHTkSjeGPngpTJWxhovPAyWjxub7vS5GMmC0MRX7nXTxV17YW6WytZ8s8plrudpEEwmPX6nBZHSREfksuqFLFvAvYumMWEJHIflHkUBkFmzi0v7l8DDbRoJnJX61iNr4B/GQ178+xAefIDKjJkPh19L+rmlTUElg+VSyvU+ICYrPryjhlEPWDwK71uOc8OaBNRn+/dlRlbzMxCjc3yBH5tsUbhbELT9Qqp6FWA==",
+        "SigningCertUrl": "https://sns.eu-west-1.amazonaws.com/SimpleNotificationService-bb750dd426d95ee9390147a5624348ee.pem",
+        "UnsubscribeUrl": "https://sns.eu-west-1.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:eu-west-1:123456789:search-request-v1-ci:8ae5eab4-02c9-4901-939a-d27e002f1005",
+        "MessageAttributes": {}
+      }
+    }
+  ]
+}

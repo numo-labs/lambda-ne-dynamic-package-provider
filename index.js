@@ -1,6 +1,7 @@
 require('env2')('.env');
 
 const Promise = require('bluebird');
+const pick = require('lodash.pick');
 
 const AwsHelper = require('aws-lambda-helper');
 const parse_sns = require('./lib/parse_sns');
@@ -13,7 +14,7 @@ const api_request = require('./lib/api_request');
  */
 
 function normaliseParameters (event) {
-  const params = parse_sns(event.Records[0].Sns.Message);
+  const params = parse_sns(event);
   params.stage = (AwsHelper.version === '$LATEST' || !AwsHelper.version) ? 'ci' : AwsHelper.version;
   params.hotelIds = params.hotelIds || [];
   return params;
@@ -22,28 +23,30 @@ function normaliseParameters (event) {
 function searchForPackages (params) {
   AwsHelper.log.trace({ hotels: params.hotelIds, hotelCount: params.hotelIds.length }, 'Searching for packages');
   return Promise.map(params.hotelIds, (id) => {
-    const options = Object.assign({}, params, { hotelIds: id });
+    const options = Object.assign({}, params, { hotelId: id });
     return Promise.promisify(api_request)(options)
-      .then((results) => {
-        if (!results || results.length === 0) {
+      .then((result) => {
+        if (!result) {
           AwsHelper.log.trace({ hotelId: id }, 'No packages found');
           return;
         }
-        AwsHelper.log.trace({ hotelId: id, packageCount: results.length }, 'Found packages');
-        return sendResultsToClient(options, results);
+        AwsHelper.log.trace({ hotelId: id }, 'Found packages');
+        return sendResultsToClient(options, result);
       });
   }, { concurrency: 10 });
 }
 
-function sendResultsToClient (params, results) {
-  return Promise.map(results, (result) => {
-    result.url = `${params.searchId}/${result.id}`;
-    const output = Object.assign(params, { items: [result] });
-    AwsHelper.log.trace({ result: output }, 'Sending result to client');
-    return Promise.promisify(AwsHelper.pushResultToClient)(output)
-      // resolve with data rather than AWS response
-      .then(() => output);
-  });
+function sendResultsToClient (params, result) {
+  result.url = `${params.searchId}/${result.id}`;
+  const output = cleanResult(Object.assign(params, { items: [result] }));
+  AwsHelper.log.trace({ result: output }, 'Sending result to client');
+  return Promise.promisify(AwsHelper.pushResultToClient)(output)
+    // resolve with data rather than AWS response
+    .then(() => output);
+}
+
+function cleanResult (result) {
+  return pick(result, ['id', 'searchId', 'userId', 'items']);
 }
 
 function handler (event, context, callback) {
@@ -62,7 +65,7 @@ function handler (event, context, callback) {
     })
     .then((results) => {
       AwsHelper.log.info({ results: results, count: results.length }, 'Package search complete');
-      callback();
+      callback(null, results);
     })
     .catch(e => callback(e));
 }
