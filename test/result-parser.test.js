@@ -59,6 +59,11 @@ describe('result parser', () => {
     assert.equal(images[0].type, 'image/jpeg');
   });
 
+  it('adds the productCode from the hotel as the provider reference', () => {
+    const result = parser.parse(pkg, hotel);
+    assert.equal(result.packageOffer.provider.reference, 'HHKTOLDP'); // pkg.hotels[0].productCode
+  });
+
   describe('amenities', () => {
     it('is empty if the hotel does not contain a `facts` object', () => {
       hotel.facts = null;
