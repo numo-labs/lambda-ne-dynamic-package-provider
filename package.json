@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/numo-labs/lambda-ne-dynamic-package-provider#readme",
   "dependencies": {
-    "aws-lambda-helper": "^2.18.0",
+    "aws-lambda-helper": "^2.22.0",
     "bl": "^1.1.2",
     "bluebird": "^3.4.1",
     "env2": "^2.0.8",
