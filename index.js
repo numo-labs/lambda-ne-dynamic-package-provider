@@ -1,77 +1,88 @@
 require('env2')('.env');
-var AwsHelper = require('aws-lambda-helper');
-var parse_sns = require('./lib/parse_sns');
-var api_request = require('./lib/api_request');
-var mapper = require('./lib/result_mapper');
+
+const Promise = require('bluebird');
+const pick = require('lodash.pick');
+
+const AwsHelper = require('aws-lambda-helper');
+const parseSns = require('./lib/parse_sns');
+const request = require('./lib/api_request');
 /**
  * handler receives an SNS message with search parameters and makes requests
  * to the ThomasCook Nordics "Classsic" Packages API. Once we get results
  * they are converted into the format required by GraphQL and inserted into
  * DynamoDB for retrieval by by the lambda-dynamo-search-result-retriever
  */
-exports.handler = function (event, context, callback) {
-  context.callbackWaitsForEmptyEventLoop = false;
 
+function normaliseParameters (event) {
+  const params = parseSns(event);
+  params.stage = (AwsHelper.version === '$LATEST' || !AwsHelper.version) ? 'ci' : AwsHelper.version;
+  params.hotelIds = params.hotelIds || [];
+  return params;
+}
+
+function searchForPackages (params) {
+  AwsHelper.log.trace({ hotels: params.hotelIds, hotelCount: params.hotelIds.length }, 'Searching for packages');
+  return Promise.map(params.hotelIds, search(params), { concurrency: 10 })
+    .then((results) => {
+      return results.filter(r => r);
+    })
+    .then((results) => {
+      return sendCompleteMessage(params, results);
+    });
+}
+
+function search (params) {
+  return (id) => {
+    const options = Object.assign({}, params, { hotelId: id });
+    return Promise.promisify(request)(options)
+      .catch(e => null) // catch errors from api
+      .then((result) => {
+        if (!result) {
+          AwsHelper.log.trace({ hotelId: id }, 'No packages found');
+          return;
+        }
+        AwsHelper.log.trace({ hotelId: id }, 'Found packages');
+        return sendResultsToClient(options, result);
+      });
+  };
+}
+
+function sendResultsToClient (params, result) {
+  result.url = `${params.searchId}/${result.id}`;
+  const output = cleanResult(Object.assign(params, { items: [result] }));
+  AwsHelper.log.trace({ result: output }, 'Sending result to client');
+  return Promise.promisify(AwsHelper.pushResultToClient)(output)
+    // resolve with data rather than AWS response
+    .then(() => output);
+}
+
+function sendCompleteMessage (params, results) {
+  const output = cleanResult(Object.assign({}, params, { items: [], searchComplete: true }));
+  AwsHelper.log.info({ results: results, count: results.length }, 'Package search complete');
+  return Promise.promisify(AwsHelper.pushResultToClient)(output);
+}
+
+function cleanResult (result) {
+  return pick(result, ['id', 'searchId', 'userId', 'items', 'searchComplete']);
+}
+
+function handler (event, context, callback) {
   AwsHelper.init(context, event); // to extract the version (ci/prod) from Arn
   AwsHelper.Logger('lambda-ne-dynamic-package-provider');
-  AwsHelper.log.info({ event: event }, 'Received event'); // debug sns
-  var params = parse_sns(event.Records[0].Sns.Message);
-  var stage = AwsHelper.version; // get environment e.g: ci or prod
-  params.stage = stage = (stage === '$LATEST' || !stage) ? 'ci' : stage;
 
-  var resultsReturned = 0;
-  if (!params.hotelIds || params.hotelIds && params.hotelIds.length === 0) {
-    AwsHelper.log.warn('No hotel ids provided');
-    return callback();
-  } else if (params.hotelIds && params.hotelIds.length > 0) {
-    var hids = params.hotelIds.split(',').length;
-    AwsHelper.log.info({ hotels: hids },
-                       'Number of Hotel IDs to get packages for');
+  return Promise.resolve()
+    .then(() => {
+      return normaliseParameters(event);
+    })
+    .then((params) => {
+      return searchForPackages(params);
+    })
+    .then((results) => {
+      callback(null, results);
+    })
+    .catch(e => callback(e));
+}
 
-    setInterval(function () {
-      if (context.getRemainingTimeInMillis() < 1000) {
-        AwsHelper.log.error({ count: hids - resultsReturned },
-                            'Hotels still remaining just before we time out');
-        if (resultsReturned > 0) {
-          return callback(null, resultsReturned);
-        } else {
-          return callback(new Error('No results returned before lambda\'s timeout'), 0);
-        }
-      }
-    }, 500).unref();
-  }
-
-  api_request(params, function (err, response) { // get packages from NE API
-    var body = JSON.parse(JSON.stringify(params));
-    delete body.hotelIds; // don't need hotelIds again https://git.io/voIAS
-    body.items = []; // send an empty array to the client so it knows wazzup!
-    body.searchComplete = true;
-    AwsHelper.pushResultToClient(body, () => {
-      AwsHelper.log.info({ err: err, packages: response.result.length },
-        'Package search complete');
-    });
-    if (err || !response.result || response.result.length === 0) {
-      AwsHelper.log.warn({ packages: response.result.length }, 'No Packages Found');
-      return callback();
-    } else {
-      return callback(err, response.result.length);
-    }
-  }).on('result', function (body) {
-    resultsReturned++;
-    delete body.hotelIds; // don't need hotelIds again https://git.io/voIAS
-    body.items = body.items.map(function (item) { // so update the list of items
-      item.url = params.searchId + '/' + item.id; // to include an item.url
-      return item;
-    });
-    body.items = body.items.map(mapper.minimiseBandwidth); // minimal fields
-    const id = body.items.length ? body.items[0].id : null;
-    AwsHelper.log.trace({ result_id: id }, 'Sending dynamic package result');
-    AwsHelper.pushResultToClient(body, function (err, data) {
-      /* istanbul ignore if */
-      if (err) {
-        return AwsHelper.log.error({ err: err }, 'Error pushing results to client');
-      }
-      AwsHelper.log.trace({ result_id: id }, 'Sent dynamic package result');
-    });
-  });
+module.exports = {
+  handler: handler
 };
