@@ -33,7 +33,9 @@ describe('integration', () => {
       const event = makeEvent({ content: { hotels: [] } });
       handler(event, context, sandbox(done, (err, result) => {
         assert.equal(err, null);
-        assert.equal(AwsHelper.pushResultToClient.called, false, 'no results should be sent to client');
+        assert.equal(AwsHelper.pushResultToClient.calledOnce, true);
+        assert.equal(AwsHelper.pushResultToClient.lastCall.args[0].searchComplete, true);
+        assert.deepEqual(AwsHelper.pushResultToClient.lastCall.args[0].items, []);
       }));
     });
 
@@ -73,7 +75,9 @@ describe('integration', () => {
       });
       handler(event, context, sandbox(done, (err) => {
         if (err) throw err;
-        assert(AwsHelper.pushResultToClient.calledOnce);
+        assert(AwsHelper.pushResultToClient.calledTwice);
+        assert.equal(AwsHelper.pushResultToClient.getCall(0).args[0].items.length, 1);
+        assert.equal(AwsHelper.pushResultToClient.getCall(1).args[0].items.length, 0);
       }));
     });
 
@@ -127,13 +131,15 @@ describe('integration', () => {
       });
       handler(event, context, sandbox(done, (err) => {
         if (err) throw err;
-        assert.equal(AwsHelper.pushResultToClient.callCount, 2);
+        assert.equal(AwsHelper.pushResultToClient.callCount, 3);
       }));
     });
 
     it('sends one result per package found', () => {
       assert.equal(AwsHelper.pushResultToClient.getCall(0).args[0].items.length, 1);
       assert.equal(AwsHelper.pushResultToClient.getCall(1).args[0].items.length, 1);
+      assert.equal(AwsHelper.pushResultToClient.getCall(2).args[0].items.length, 0);
+      assert.equal(AwsHelper.pushResultToClient.getCall(2).args[0].searchComplete, true);
     });
 
     it('sets a `type` of package on results', () => {

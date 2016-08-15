@@ -4,8 +4,8 @@ const Promise = require('bluebird');
 const pick = require('lodash.pick');
 
 const AwsHelper = require('aws-lambda-helper');
-const parse_sns = require('./lib/parse_sns');
-const api_request = require('./lib/api_request');
+const parseSns = require('./lib/parse_sns');
+const request = require('./lib/api_request');
 /**
  * handler receives an SNS message with search parameters and makes requests
  * to the ThomasCook Nordics "Classsic" Packages API. Once we get results
@@ -14,7 +14,7 @@ const api_request = require('./lib/api_request');
  */
 
 function normaliseParameters (event) {
-  const params = parse_sns(event);
+  const params = parseSns(event);
   params.stage = (AwsHelper.version === '$LATEST' || !AwsHelper.version) ? 'ci' : AwsHelper.version;
   params.hotelIds = params.hotelIds || [];
   return params;
@@ -22,9 +22,19 @@ function normaliseParameters (event) {
 
 function searchForPackages (params) {
   AwsHelper.log.trace({ hotels: params.hotelIds, hotelCount: params.hotelIds.length }, 'Searching for packages');
-  return Promise.map(params.hotelIds, (id) => {
+  return Promise.map(params.hotelIds, search(params), { concurrency: 10 })
+    .then((results) => {
+      return results.filter(r => r);
+    })
+    .then((results) => {
+      return sendCompleteMessage(params, results);
+    });
+}
+
+function search (params) {
+  return (id) => {
     const options = Object.assign({}, params, { hotelId: id });
-    return Promise.promisify(api_request)(options)
+    return Promise.promisify(request)(options)
       .then((result) => {
         if (!result) {
           AwsHelper.log.trace({ hotelId: id }, 'No packages found');
@@ -33,7 +43,7 @@ function searchForPackages (params) {
         AwsHelper.log.trace({ hotelId: id }, 'Found packages');
         return sendResultsToClient(options, result);
       });
-  }, { concurrency: 10 });
+  };
 }
 
 function sendResultsToClient (params, result) {
@@ -45,8 +55,14 @@ function sendResultsToClient (params, result) {
     .then(() => output);
 }
 
+function sendCompleteMessage (params, results) {
+  const output = cleanResult(Object.assign({}, params, { items: [], searchComplete: true }));
+  AwsHelper.log.info({ results: results, count: results.length }, 'Package search complete');
+  return Promise.promisify(AwsHelper.pushResultToClient)(output);
+}
+
 function cleanResult (result) {
-  return pick(result, ['id', 'searchId', 'userId', 'items']);
+  return pick(result, ['id', 'searchId', 'userId', 'items', 'searchComplete']);
 }
 
 function handler (event, context, callback) {
@@ -61,10 +77,6 @@ function handler (event, context, callback) {
       return searchForPackages(params);
     })
     .then((results) => {
-      return results.filter(r => r);
-    })
-    .then((results) => {
-      AwsHelper.log.info({ results: results, count: results.length }, 'Package search complete');
       callback(null, results);
     })
     .catch(e => callback(e));
