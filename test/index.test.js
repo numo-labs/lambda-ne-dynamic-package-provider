@@ -3,6 +3,7 @@
 const assert = require('assert');
 const sinon = require('sinon');
 const AwsHelper = require('aws-lambda-helper');
+const nock = require('nock');
 
 const handler = require('../index').handler;
 const sandbox = require('./utils/sandbox');
@@ -109,6 +110,18 @@ describe('integration', () => {
       handler(event, context, sandbox(done, (err) => {
         assert(err instanceof Error);
         assert.equal(err.message, 'test error');
+      }));
+    });
+
+    it('ignores errors in package api calls', (done) => {
+      const event = makeEvent({ content: { hotels: ['hotel:ne.wvid.118060'] } });
+      nock(`https://${process.env.API_GATEWAY_ENDPOINT}`)
+        .get('/ci/dptrips')
+        .query(true)
+        .reply(404, {});
+      handler(event, context, sandbox(done, (err, result) => {
+        assert(!err);
+        assert.deepEqual(result, []);
       }));
     });
   });

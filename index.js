@@ -35,6 +35,7 @@ function search (params) {
   return (id) => {
     const options = Object.assign({}, params, { hotelId: id });
     return Promise.promisify(request)(options)
+      .catch(e => null) // catch errors from api
       .then((result) => {
         if (!result) {
           AwsHelper.log.trace({ hotelId: id }, 'No packages found');
